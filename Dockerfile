@@ -1,10 +1,16 @@
-FROM alpine:3.18
+FROM ubuntu:16.04
 
 MAINTAINER FT
+RUN apt-get update
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt update
+RUN apt install oracle-java8-installer
+RUN apt install oracle-java8-set-default
 
-RUN set -eux; \
-    apk add --update --no-cache \
-        openldap-clients
+
+
+
+
 RUN adduser -S user  -G root
 USER user
 WORKDIR /home/user
