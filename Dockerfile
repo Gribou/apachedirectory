@@ -6,7 +6,7 @@ RUN apt-get install wget procps -y
 
 WORKDIR /tmp
 
-RUN wget https://www-us.apache.org/dist//directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25-amd64.deb
+RUN wget https://archive.apache.org/dist/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25-amd64.deb
 
 RUN chmod +x apacheds-2.0.0.AM25-amd64.deb
 
